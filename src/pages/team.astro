@@ -1,0 +1,98 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import TeamSections from "~/components/widgets/TeamSections.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+
+const metadata = {
+  title: "Our Team",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Meet the Team"
+    title="The Minds Behind Fishtail Code"
+    subtitle="We are a diverse team of passionate developers, designers, and strategists dedicated to delivering excellence."
+  />
+
+  <!-- Team Widget ******************* -->
+
+  <TeamSections
+    title="Our Leadership"
+    subtitle="Meet the people who drive our vision forward."
+    team={[
+      {
+        name: "Sanjay Guwaju",
+        role: "Founder & CEO",
+        description:
+          "Visionary leader with over 10 years of experience in the IT industry. Passionate about innovation and technology.",
+        image:
+          "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+        socialLinks: {
+          facebook: "#",
+          twitter: "#",
+          github: "#",
+          dribbble: "#",
+        },
+      },
+      {
+        name: "Aarav Sharma",
+        role: "CTO",
+        description:
+          "Tech enthusiast and architect of our scalable solutions. Leads the development team with expertise in cloud computing.",
+        image:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        socialLinks: {
+          facebook: "#",
+          twitter: "#",
+          github: "#",
+        },
+      },
+      {
+        name: "Priya Thapa",
+        role: "Head of Design",
+        description:
+          "Creative mind behind our stunning user interfaces. Believes in design that solves problems.",
+        image:
+          "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80",
+        socialLinks: {
+          dribbble: "#",
+          twitter: "#",
+        },
+      },
+      {
+        name: "Rohan Karki",
+        role: "Lead Developer",
+        description:
+          "Full-stack wizard who ensures our code is clean, efficient, and robust.",
+        image:
+          "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+        socialLinks: {
+          github: "#",
+          twitter: "#",
+        },
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: "primary",
+        text: "Join Our Team",
+        href: "/contact",
+        icon: "tabler:briefcase",
+      },
+    ]}
+  >
+    <Fragment slot="title"> Want to work with us? </Fragment>
+
+    <Fragment slot="subtitle">
+      We are always looking for talented individuals to join our growing team.
+      Check out our open positions or send us your resume.
+    </Fragment>
+  </CallToAction>
+</Layout>

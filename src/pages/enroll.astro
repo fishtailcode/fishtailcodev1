@@ -1,0 +1,102 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import HeroText from "~/components/widgets/HeroText.astro";
+import ContactUs from "~/components/widgets/Contact.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+
+const metadata = {
+  title: "Enroll Now - Start Your Learning Journey",
+  description:
+    "Register for our IT training courses. Fill out the form to secure your spot in our upcoming Python, Java, or Web Development classes.",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Enrollment"
+    title="Start Your Learning Journey"
+    subtitle="Take the first step towards a successful career in IT. Fill out the form below to register for our courses."
+  />
+
+  <ContactUs
+    id="form"
+    title="Course Registration"
+    subtitle="Please provide your details and select the course you wish to join."
+    inputs={[
+      {
+        type: "text",
+        name: "name",
+        label: "Full Name",
+      },
+      {
+        type: "email",
+        name: "email",
+        label: "Email Address",
+      },
+      {
+        type: "tel",
+        name: "phone",
+        label: "Phone Number",
+      },
+      {
+        type: "select",
+        name: "course",
+        label: "Select Course",
+        placeholder: "Choose a course...",
+        options: [
+          { value: "python", label: "Python Programming" },
+          { value: "java", label: "Java Development" },
+          { value: "web-development", label: "Web Development" },
+          { value: "data-science", label: "Data Science" },
+          { value: "cloud-computing", label: "Cloud Computing" },
+          { value: "cyber-security", label: "Cyber Security" },
+        ],
+      },
+      {
+        type: "select",
+        name: "mode",
+        label: "Preferred Mode",
+        placeholder: "Choose mode...",
+        options: [
+          { value: "physical", label: "Physical Class (Kathmandu)" },
+          { value: "online", label: "Online Class" },
+        ],
+      },
+    ]}
+    textarea={{
+      label: "Additional Comments",
+      placeholder: "Any specific requirements or questions?",
+    }}
+    disclaimer={{
+      label: "By submitting this form, you agree to our terms and conditions.",
+    }}
+    description="Our team will contact you shortly to confirm your enrollment and provide payment details."
+    button="Enroll Now"
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Why Learn With Us?"
+    items={[
+      {
+        title: "Expert Instructors",
+        description:
+          "Learn from industry professionals with years of experience.",
+        icon: "tabler:school",
+      },
+      {
+        title: "Hands-on Projects",
+        description: "Build real-world projects to strengthen your portfolio.",
+        icon: "tabler:code",
+      },
+      {
+        title: "Career Support",
+        description: "Get assistance with resume building and job placement.",
+        icon: "tabler:briefcase",
+      },
+    ]}
+  />
+</Layout>

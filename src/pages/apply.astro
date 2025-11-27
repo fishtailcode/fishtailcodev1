@@ -1,0 +1,67 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import HeroText from "~/components/widgets/HeroText.astro";
+import ContactUs from "~/components/widgets/Contact.astro";
+
+const metadata = {
+  title: "Apply Now - Join Our Team",
+  description:
+    "Apply for a position at Fishtail Code. We are always looking for talented individuals to join our growing team.",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Careers"
+    title="Join Our Team"
+    subtitle="Ready to take the next step in your career? Fill out the application form below."
+  />
+
+  <ContactUs
+    id="form"
+    title="Job Application"
+    subtitle="Tell us about yourself and why you'd be a great fit for Fishtail Code."
+    inputs={[
+      {
+        type: "text",
+        name: "name",
+        label: "Full Name",
+      },
+      {
+        type: "email",
+        name: "email",
+        label: "Email Address",
+      },
+      {
+        type: "tel",
+        name: "phone",
+        label: "Phone Number",
+      },
+      {
+        type: "text",
+        name: "position",
+        label: "Position Applied For",
+        placeholder: "e.g. Senior React Developer",
+      },
+      {
+        type: "url",
+        name: "portfolio",
+        label: "Portfolio / LinkedIn URL",
+        placeholder: "https://...",
+      },
+    ]}
+    textarea={{
+      label: "Cover Letter",
+      placeholder:
+        "Tell us why you want to join us and what makes you a good fit...",
+    }}
+    disclaimer={{
+      label:
+        "By submitting this application, you certify that the information provided is accurate.",
+    }}
+    description="We review applications on a rolling basis. If your profile matches our requirements, we will contact you for an interview."
+    button="Submit Application"
+  />
+</Layout>

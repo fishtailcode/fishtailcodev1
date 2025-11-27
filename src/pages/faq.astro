@@ -1,0 +1,100 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import HeroText from "~/components/widgets/HeroText.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+
+const metadata = {
+  title: "FAQ - Frequently Asked Questions",
+  description:
+    "Find answers to common questions about Fishtail Code services, training courses, and company policies.",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Frequently Asked Questions"
+    subtitle="Got questions? We've got answers. If you can't find what you're looking for, feel free to contact us."
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="General Questions"
+    subtitle="Common queries about our company and processes."
+    items={[
+      {
+        title: "What services does Fishtail Code provide?",
+        description:
+          "We provide a wide range of IT services including Web Development, Mobile App Development, SEO & Digital Marketing, E-commerce Solutions, and IT Consulting.",
+      },
+      {
+        title: "Do you offer IT training?",
+        description:
+          "Yes, we offer professional training courses in Python, Java, Web Development, Data Science, and more. Our courses are designed for both beginners and advanced learners.",
+      },
+      {
+        title: "Where are you located?",
+        description:
+          "We are based in Kathmandu, Nepal. However, we work with clients globally and offer online training options as well.",
+      },
+      {
+        title: "How can I get a quote for my project?",
+        description:
+          "You can get a free quote by filling out the contact form on our website or by emailing us directly. We will get back to you within 24 hours.",
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Training & Courses"
+    subtitle="Everything you need to know about our educational programs."
+    columns={1}
+    items={[
+      {
+        title: "Do I need prior coding experience to join?",
+        description:
+          "Most of our beginner courses do not require prior experience. We start from the basics. For advanced courses, some prerequisites may apply.",
+      },
+      {
+        title: "Do you provide job placement assistance?",
+        description:
+          "Yes, we have a dedicated placement cell that helps top-performing students find internship and job opportunities with our hiring partners.",
+      },
+      {
+        title: "Are classes online or physical?",
+        description:
+          "We offer both physical classes at our office in Kathmandu and online classes via Zoom/Google Meet for students who cannot attend in person.",
+      },
+      {
+        title: "Do you provide certificates?",
+        description:
+          "Yes, upon successful completion of the course and project work, you will receive a verified certificate from Fishtail Code.",
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: "primary",
+        text: "Contact Us",
+        href: "/contact",
+        icon: "tabler:message",
+      },
+    ]}
+  >
+    <Fragment slot="title"> Still have questions? </Fragment>
+
+    <Fragment slot="subtitle">
+      We're here to help. Reach out to our support team and we'll answer any
+      other questions you may have.
+    </Fragment>
+  </CallToAction>
+</Layout>

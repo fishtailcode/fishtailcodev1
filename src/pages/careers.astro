@@ -1,0 +1,188 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Features3 from "~/components/widgets/Features3.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+
+const metadata = {
+  title: "Careers - Join Our Team",
+  description:
+    "Join Fishtail Code and help us build the future of technology. Explore our current job openings and company culture.",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Careers"
+    title="Build the Future with Us"
+    subtitle="We are always looking for passionate and talented individuals to join our team. If you love technology and innovation, we want to hear from you."
+    image={{
+      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Fishtail Code Team",
+    }}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Why Work With Us?"
+    subtitle="We offer a collaborative environment where you can grow and make an impact."
+    columns={3}
+    items={[
+      {
+        title: "Growth Opportunities",
+        description:
+          "We invest in your professional development with training, mentorship, and challenging projects.",
+        icon: "tabler:trending-up",
+      },
+      {
+        title: "Flexible Work",
+        description:
+          "We believe in work-life balance and offer flexible working hours and remote options.",
+        icon: "tabler:clock",
+      },
+      {
+        title: "Great Culture",
+        description:
+          "Join a diverse and inclusive team that values creativity, collaboration, and fun.",
+        icon: "tabler:users",
+      },
+      {
+        title: "Competitive Salary",
+        description:
+          "We offer competitive compensation packages and performance-based bonuses.",
+        icon: "tabler:currency-dollar",
+      },
+      {
+        title: "Latest Tech",
+        description:
+          "Work with the latest technologies and tools to build cutting-edge solutions.",
+        icon: "tabler:device-laptop",
+      },
+      {
+        title: "Impact",
+        description:
+          "Your work will have a real impact on our clients and the community.",
+        icon: "tabler:world",
+      },
+    ]}
+  />
+
+  <!-- Job Openings ****************** -->
+
+  <div class="py-16 bg-blue-50 dark:bg-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
+        >
+          Current Openings
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          Explore our open positions and apply today.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Job 1 -->
+        <div
+          class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+        >
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            Senior React Developer
+          </h3>
+          <div
+            class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4"
+          >
+            <span class="mr-4"
+              ><icon name="tabler:map-pin" class="inline w-4 h-4 mr-1"></icon> Remote
+              / Kathmandu</span
+            >
+            <span
+              ><icon name="tabler:clock" class="inline w-4 h-4 mr-1"></icon> Full-time</span
+            >
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            We are looking for an experienced React developer to lead our
+            frontend team.
+          </p>
+          <a href="/apply" class="text-blue-600 hover:underline font-medium"
+            >Apply Now &rarr;</a
+          >
+        </div>
+
+        <!-- Job 2 -->
+        <div
+          class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+        >
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            Python Instructor
+          </h3>
+          <div
+            class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4"
+          >
+            <span class="mr-4"
+              ><icon name="tabler:map-pin" class="inline w-4 h-4 mr-1"></icon> Kathmandu</span
+            >
+            <span
+              ><icon name="tabler:clock" class="inline w-4 h-4 mr-1"></icon> Part-time</span
+            >
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Passionate about teaching? Join us as a Python instructor for our
+            training academy.
+          </p>
+          <a href="/apply" class="text-blue-600 hover:underline font-medium"
+            >Apply Now &rarr;</a
+          >
+        </div>
+
+        <!-- Job 3 -->
+        <div
+          class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+        >
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            UI/UX Designer Intern
+          </h3>
+          <div
+            class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4"
+          >
+            <span class="mr-4"
+              ><icon name="tabler:map-pin" class="inline w-4 h-4 mr-1"></icon> Kathmandu</span
+            >
+            <span
+              ><icon name="tabler:clock" class="inline w-4 h-4 mr-1"></icon> Internship</span
+            >
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Start your career in design with hands-on experience in real-world
+            projects.
+          </p>
+          <a href="/apply" class="text-blue-600 hover:underline font-medium"
+            >Apply Now &rarr;</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <CallToAction
+    actions={[
+      {
+        variant: "primary",
+        text: "Send Your Resume",
+        href: "mailto:careers@fishtailcode.com",
+        icon: "tabler:mail",
+      },
+    ]}
+  >
+    <Fragment slot="title"> Don't see a perfect fit? </Fragment>
+
+    <Fragment slot="subtitle">
+      We are always looking for talented people. Send us your resume and we'll
+      keep you in mind for future openings.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,115 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Hero2 from "~/components/widgets/Hero2.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Features3 from "~/components/widgets/Features3.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Brands from "~/components/widgets/Brands.astro";
+import { services } from "~/data/services";
+
+export async function getStaticPaths() {
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+
+const metadata = {
+  title: `${service.title} | Fishtail Code`,
+  description: service.description,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero2
+    tagline="Our Expertise"
+    title={service.title}
+    subtitle={service.subtitle}
+    actions={[
+      {
+        variant: "primary",
+        text: "Get a Quote",
+        href: "/contact",
+        icon: "tabler:message-circle",
+      },
+    ]}
+    image={{
+      src: service.heroImage,
+      alt: service.title,
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Hero2>
+
+  <!-- Process Section -->
+  <Steps
+    title="Our Process"
+    subtitle="We follow a proven methodology to ensure successful project delivery."
+    items={service.process.map((step) => ({
+      title: step.title,
+      description: step.description,
+      icon: step.icon,
+    }))}
+    image={{
+      src: "https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+      alt: "Steps image",
+    }}
+  />
+
+  <!-- Features Section -->
+  <Features3
+    title="Service Includes"
+    subtitle="Everything you need to succeed."
+    columns={2}
+    items={service.features.map((feature) => ({
+      title: feature.title,
+      description: feature.description,
+      icon: feature.icon,
+    }))}
+  />
+
+  <!-- Benefits Section -->
+  <Features3
+    title="The Benefits"
+    subtitle="Why choose us for your next project?"
+    columns={2}
+    isBeforeContent={true}
+    items={service.benefits.map((benefit) => ({
+      title: benefit,
+      description: "Experience the difference with our professional services.",
+      icon: "tabler:check",
+    }))}
+  />
+
+  <!-- Technologies Section -->
+  <Brands
+    title="Technologies We Use"
+    subtitle="We use the latest tools and frameworks to build robust solutions."
+    icons={service.technologies}
+    images={[]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: "primary",
+        text: "Start Your Project",
+        href: "/contact",
+        icon: "tabler:rocket",
+      },
+    ]}
+  >
+    <Fragment slot="title"> Ready to Transform Your Business? </Fragment>
+
+    <Fragment slot="subtitle">
+      Let's discuss how we can help you achieve your goals with our {
+        service.title
+      } services.
+    </Fragment>
+  </CallToAction>
+</Layout>
