@@ -1,0 +1,345 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Hero2 from "~/components/widgets/Hero2.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Testimonials from "~/components/widgets/Testimonials.astro";
+import Brands from "~/components/widgets/Brands.astro";
+import { courses } from "~/data/courses";
+
+export async function getStaticPaths() {
+  return courses.map((course) => ({
+    params: { slug: course.slug },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+
+const metadata = {
+  title: `${course.title} Course | Fishtail Code`,
+  description: course.description,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero2
+    tagline="Professional IT Training"
+    title={course.title}
+    subtitle={course.subtitle}
+    actions={[
+      {
+        variant: "primary",
+        text: "Enroll Now",
+        href: "/contact",
+        icon: "tabler:school",
+      },
+      { text: "Download Syllabus", href: "#", icon: "tabler:download" },
+    ]}
+    image={{
+      src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: course.title,
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Hero2>
+
+  <!-- Main Content -->
+  <section class="py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Left Column: Content -->
+        <div class="lg:col-span-2 space-y-12">
+          <!-- Overview -->
+          <div>
+            <h2 class="text-3xl font-bold mb-6 font-heading">
+              Course Overview
+            </h2>
+            <div class="prose dark:prose-invert max-w-none text-lg text-muted">
+              {
+                course.overview
+                  .split("\n")
+                  .map((paragraph) => <p class="mb-4">{paragraph}</p>)
+              }
+            </div>
+          </div>
+
+          <!-- Curriculum -->
+          <div>
+            <h2 class="text-3xl font-bold mb-6 font-heading">Curriculum</h2>
+            <div class="space-y-4">
+              {
+                course.curriculum.map((module, index) => (
+                  <details class="group bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-4 text-lg">
+                      <span class="flex items-center gap-3">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 text-sm font-bold">
+                          {index + 1}
+                        </span>
+                        {module.title}
+                      </span>
+                      <span class="transition group-open:rotate-180">
+                        <svg
+                          fill="none"
+                          height="24"
+                          shape-rendering="geometricPrecision"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                        >
+                          <path d="M6 9l6 6 6-6" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <div class="text-muted border-t border-gray-200 dark:border-gray-700 p-4 pt-0 mt-2">
+                      <ul class="list-disc pl-5 space-y-2 mt-2">
+                        {module.content.map((item) => (
+                          <li>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </details>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div>
+            <h2 class="text-3xl font-bold mb-6 font-heading">
+              Why Learn {course.title}?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {
+                course.benefits.map((benefit) => (
+                  <div class="flex items-start gap-3">
+                    <div class="mt-1">
+                      <svg
+                        class="w-5 h-5 text-green-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <p class="text-muted">{benefit}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <div class="lg:col-span-1 space-y-8">
+          <!-- Course Details Card -->
+          <div
+            class="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700 sticky top-24"
+          >
+            <h3
+              class="text-xl font-bold mb-6 border-b border-gray-100 dark:border-gray-700 pb-4"
+            >
+              Course Details
+            </h3>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center justify-between">
+                <span class="text-muted flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path></svg
+                  >
+                  Duration
+                </span>
+                <span class="font-semibold">{course.duration}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-muted flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path></svg
+                  >
+                  Mode
+                </span>
+                <span class="font-semibold">{course.mode}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-muted flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg
+                  >
+                  Level
+                </span>
+                <span class="font-semibold">{course.level}</span>
+              </div>
+            </div>
+
+            <!-- Upcoming Classes -->
+            <div class="mb-8">
+              <h4
+                class="font-bold mb-4 text-sm uppercase tracking-wider text-muted"
+              >
+                Upcoming Classes
+              </h4>
+              <div class="space-y-3">
+                {
+                  course.upcomingClasses.map((cls) => (
+                    <div class="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg border border-blue-100 dark:border-blue-800">
+                      <div class="font-semibold text-blue-700 dark:text-blue-300 flex items-center gap-2">
+                        <svg
+                          class="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                        {cls.date}
+                      </div>
+                      <div class="text-sm text-muted mt-1 ml-6">{cls.time}</div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="mb-8">
+              <h4
+                class="font-bold mb-4 text-sm uppercase tracking-wider text-muted"
+              >
+                Skills You'll Learn
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                {
+                  course.skills.map((skill) => (
+                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300">
+                      {skill}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+
+            <a
+              href="/contact"
+              class="btn-primary w-full text-center block py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transition transform hover:-translate-y-1"
+            >
+              Request Syllabus
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <Testimonials
+    title="Student Success Stories"
+    subtitle="Hear from our students who have transformed their careers."
+    testimonials={[
+      {
+        testimonial: `The ${course.title} course at Fishtail Code was a game-changer for me. The practical approach and experienced instructors helped me land my first job.`,
+        name: "Sushant K.C.",
+        job: "Junior Developer",
+        image: {
+          src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+          alt: "Sushant K.C.",
+        },
+      },
+      {
+        testimonial:
+          "I highly recommend this course. The curriculum is up-to-date with industry standards, and the support from the team is amazing.",
+        name: "Anjali Sharma",
+        job: "Software Engineer",
+        image: {
+          src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+          alt: "Anjali Sharma",
+        },
+      },
+      {
+        testimonial:
+          "The best investment I made for my career. The hands-on projects gave me the confidence to tackle real-world problems.",
+        name: "Rohan Thapa",
+        job: "Freelancer",
+        image: {
+          src: "https://images.unsplash.com/photo-1554151228-14d9def656ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80",
+          alt: "Rohan Thapa",
+        },
+      },
+    ]}
+  />
+
+  <!-- Hiring Partners -->
+  <Brands
+    title="Our Hiring Partners"
+    subtitle="Our graduates work at top companies in Nepal and abroad."
+    icons={[
+      "tabler:brand-google",
+      "tabler:brand-facebook",
+      "tabler:brand-amazon",
+      "tabler:brand-windows",
+      "tabler:brand-netflix",
+    ]}
+    images={[]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: "primary",
+        text: "Start Your Journey",
+        href: "/contact",
+        icon: "tabler:rocket",
+      },
+    ]}
+  >
+    <Fragment slot="title"> Ready to Launch Your Career? </Fragment>
+
+    <Fragment slot="subtitle">
+      Join hundreds of successful students who have kickstarted their IT careers
+      with us. <br class="hidden md:inline" />Don't wait, enroll today!
+    </Fragment>
+  </CallToAction>
+</Layout>
