@@ -1,7 +1,6 @@
 ---
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import Headline from '~/components/ui/Headline.astro';
-import Button from '~/components/ui/Button.astro';
 import { Icon } from 'astro-icon/components';
 
 interface Service {
@@ -68,68 +67,44 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
   
-  <!-- Services Grid -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
-    {services.map((service, index) => (
+    {services.map((service) => (
       <div class="group relative">
         <!-- Service Card -->
-        <div class="card-hover p-8 h-full relative overflow-hidden">
-          <!-- Background gradient on hover -->
-          <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-slate-800 dark:to-slate-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative h-full p-8 bg-white dark:bg-slate-900 rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border border-gray-100 dark:border-slate-800 group-hover:border-blue-500/30 dark:group-hover:border-blue-400/30">
           
-          <!-- Floating background elements -->
-          <div class="absolute top-4 right-4 w-20 h-20 bg-gradient-primary rounded-full opacity-0 group-hover:opacity-10 transition-all duration-500 blur-xl"></div>
+          <!-- Gradient Glow Effect -->
+          <div class="absolute -inset-px bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl opacity-0 group-hover:opacity-10 dark:group-hover:opacity-20 blur-lg transition-opacity duration-500" aria-hidden="true"></div>
           
-          <div class="relative z-10">
-            <!-- Icon and Title -->
-            <div class="flex items-center mb-6">
-              <div class="feature-icon group-hover:animate-pulse-glow">
-                <Icon name={service.icon} class="w-full h-full" />
-              </div>
-              <div class="ml-4">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-gradient transition-all duration-300">
-                  {service.title}
-                </h3>
-                {service.price && (
-                  <p class="text-lg font-semibold text-gradient mt-1">{service.price}</p>
-                )}
-              </div>
+          <div class="relative z-10 flex flex-col h-full">
+            <!-- Icon -->
+            <div class="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm group-hover:shadow-md group-hover:scale-110 transform">
+              <Icon name={service.icon} class="w-8 h-8" />
             </div>
-            
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+              {service.title}
+            </h3>
+
             <!-- Description -->
-            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+            <p class="text-gray-600 dark:text-slate-400 mb-6 flex-grow leading-relaxed">
               {service.description}
             </p>
-            
-            <!-- Features List -->
-            <div class="space-y-3 mb-6">
-              {service.features.map((feature, featureIndex) => (
-                <div class="flex items-center space-x-3 group-hover:translate-x-2 transition-transform duration-300" style={`transition-delay: ${featureIndex * 0.1}s`}>
-                  <div class="w-2 h-2 bg-gradient-primary rounded-full flex-shrink-0"></div>
-                  <span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-300">
+
+            <!-- Features (if available) -->
+            {service.features && (
+              <ul class="space-y-2 border-t border-gray-100 dark:border-slate-800 pt-4 mt-auto">
+                {service.features.map((feature) => (
+                  <li class="flex items-center text-sm text-gray-500 dark:text-slate-500">
+                    <Icon name="tabler:check" class="w-4 h-4 mr-2 text-green-500" />
                     {feature}
-                  </span>
-                </div>
-              ))}
-            </div>
-            
-            <!-- CTA Button -->
-            <Button
-              variant="primary"
-              text="Get Started"
-              href="/contact"
-              class="w-full group-hover:shadow-glow transition-all duration-300"
-            />
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          
-          <!-- Decorative corner elements -->
-          <div class="absolute top-0 left-0 w-0 h-0 border-l-4 border-t-4 border-transparent border-l-gradient-primary border-t-gradient-primary opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-          <div class="absolute bottom-0 right-0 w-0 h-0 border-r-4 border-b-4 border-transparent border-r-gradient-secondary border-b-gradient-secondary opacity-0 group-hover:opacity-100 transition-all duration-500" style="transition-delay: 0.2s;"></div>
         </div>
-        
-        <!-- Floating particles -->
-        <div class="absolute top-2 right-2 w-3 h-3 bg-gradient-primary rounded-full opacity-0 group-hover:opacity-60 animate-float transition-opacity duration-500"></div>
-        <div class="absolute bottom-2 left-2 w-2 h-2 bg-gradient-secondary rounded-full opacity-0 group-hover:opacity-60 animate-float transition-opacity duration-500" style="animation-delay: 1s;"></div>
       </div>
     ))}
   </div>

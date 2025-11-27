@@ -4,7 +4,6 @@ import Layout from "~/layouts/PageLayout.astro";
 import Hero from "~/components/widgets/Hero.astro";
 import Features2 from "~/components/widgets/Features2.astro";
 import Services from "~/components/widgets/Services.astro";
-import Steps from "~/components/widgets/Steps.astro";
 import Content from "~/components/widgets/Content.astro";
 import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
 import FAQs from "~/components/widgets/FAQs.astro";
@@ -24,116 +23,82 @@ const metadata = {
     actions={[
       {
         variant: "primary",
-        text: "Hire Us for Development",
+        text: "Build Your Digital Product",
         href: "/services",
-        icon: "tabler:briefcase",
+        icon: "tabler:rocket",
       },
       {
-        text: "Browse IT Courses",
+        text: "Start Your Coding Journey",
         href: "/courses",
-        target: "_blank",
-        icon: "tabler:device-laptop",
+        icon: "tabler:school",
       },
     ]}
     image={{
       src: "~/assets/images/hero-image-1.png",
-      alt: "Fishtail Code digital solutions and training",
+      alt: "Fishtail Code - Innovation and Education",
     }}
   >
     <Fragment slot="title">
       <span
-        class="text-2xl tracking-wider text-blue-600 uppercase font-bold mb-4 block"
+        class="block text-blue-600 dark:text-blue-400 text-xl font-bold tracking-wide uppercase mb-2"
       >
-        Welcome to Fishtail Code
+        Software Services & IT Academy
       </span>
-      We Engineer Digital Excellence. <br class="hidden lg:inline" />
+      We Build Future Tech. <br class="hidden lg:inline" />
       <span
         class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-700 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400"
       >
-        We Train Future Masters.
+        We Train Future Leaders.
       </span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Bridge the gap between <strong>ideas and reality</strong>. Whether you
-        are a startup needing a scalable app, or a student seeking a career in
-        code, <span class="font-semibold">Fishtail Code</span> is your partner in
-        innovation.
+        Your trusted partner for <strong
+          >enterprise-grade software development</strong
+        > and <strong>industry-standard IT training</strong>. Whether you need a
+        scalable application or a career transformation, we deliver excellence.
       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">
-        Software Services & IT Academy.
-      </span>
-      Your destination for top-tier Software Development and Industry-Standard Training.
     </Fragment>
   </Hero>
   <!-- Features Widget *************** -->
 
   <Features2
     id="features"
-    title="Why Choose Fishtail Code?"
-    subtitle="We bridge the gap between industry demand and technical expertise."
-    tagline="Our Ecosystem"
+    title="The Fishtail Ecosystem"
+    subtitle="Bridging the gap between professional software engineering and practical education."
     items={[
       {
-        title: "Custom Software Engineering",
+        title: "For Businesses",
         description:
-          "We don't just write code; we build business solutions. From high-performance websites to complex SaaS platforms, we engineer software that scales.",
-        icon: "tabler:code",
+          "We engineer high-performance websites, mobile apps, and SaaS platforms that scale with your growth.",
+        icon: "tabler:briefcase",
         callToAction: {
-          text: "For Businesses",
+          text: "Explore Services",
           href: "/services",
         },
       },
       {
-        title: "Project-Based Learning",
+        title: "For Students",
         description:
-          "Forget theory-only lectures. Our students learn by building real-world applications, gaining the practical experience top employers demand.",
+          "Learn by doing. Our project-based curriculum prepares you for the real demands of the tech industry.",
         icon: "tabler:school",
         callToAction: {
-          text: "For Students",
+          text: "View Courses",
           href: "/courses",
         },
       },
       {
         title: "Modern Tech Stack",
         description:
-          "Whether building for clients or teaching students, we use the latest tools: React, Next.js, Tailwind, Python, and Cloud technologies.",
+          "We use and teach the latest technologies: React, Next.js, Python, Flutter, and Cloud Infrastructure.",
         icon: "tabler:stack-2",
-        callToAction: {
-          text: "See Our Tech",
-          href: "#",
-        },
       },
       {
-        title: "Career-Focused Mentorship",
+        title: "Expert Mentorship",
         description:
-          "We provide more than just classes. Students get resume reviews, mock interviews, and direct mentorship from working professionals.",
+          "Gain insights from working professionals who guide you through code reviews and career advice.",
         icon: "tabler:users",
-        callToAction: {
-          text: "Career Support",
-          href: "#",
-        },
-      },
-      {
-        title: "Performance & SEO",
-        description:
-          "Our development philosophy prioritizes Core Web Vitals and SEO. We ensure your digital presence is blazing fast and easily discoverable.",
-        icon: "tabler:rocket",
-        callToAction: {
-          text: "View Metrics",
-          href: "#",
-        },
-      },
-      {
-        title: "Long-Term Partnership",
-        description:
-          "For clients, we offer dedicated maintenance. For students, we offer lifetime community access. We are committed to your long-term success.",
-        icon: "tabler:heart-handshake",
-        callToAction: {
-          text: "Contact Us",
-          href: "/contact",
-        },
       },
     ]}
   >
@@ -145,82 +110,100 @@ const metadata = {
         </div>
       </div>
     </Fragment>
-    <Fragment slot="subtitle">
-      <span class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-        Whether you are a startup founder looking for a <span
-          class="font-semibold text-blue-600">dev team</span
-        >, or a student looking for a <span
-          class="font-semibold text-purple-600">mentor</span
-        >, Fishtail Code delivers excellence through:
-        <br />
-        <span class="font-semibold text-primary">Innovation</span> •
-        <span class="font-semibold text-primary">Education</span> •
-        <span class="font-semibold text-primary">Execution</span>
-      </span>
-    </Fragment>
   </Features2>
 
   <!-- Services Widget *************** -->
   <Services
     id="services"
-    tagline="Services"
-    title="Our Digital Services"
-    subtitle="Comprehensive solutions to grow your business online. We blend creativity with technical expertise."
-    columns={3}
-    classes={{
-      container: "max-w-7xl mx-auto",
-      panel:
-        "group relative rounded-3xl p-6 bg-white dark:bg-slate-900 shadow-xl shadow-gray-100/50 dark:shadow-slate-800/90 border border-transparent dark:border-slate-800 transition duration-300 hover:-translate-y-2 overflow-hidden hover:border-blue-500/50 dark:hover:border-blue-400/50",
-      icon: "w-12 h-12 mb-4 text-blue-600 dark:text-blue-400 p-2 rounded-xl bg-blue-50 dark:bg-slate-800 group-hover:bg-blue-600 group-hover:text-white transition duration-300",
-    }}
-    items={[
+    tagline="Our Expertise"
+    title="Comprehensive Digital Solutions"
+    subtitle="From concept to code, we deliver products that drive business growth."
+    services={[
       {
         title: "Custom Web Development",
         description:
           "Blazing-fast, SEO-optimized websites built with modern tech (Astro, React, Next.js) designed to convert visitors into customers.",
         icon: "tabler:browser",
+        features: ["High Performance", "SEO Optimized", "Responsive Design"],
       },
       {
         title: "Mobile App Development",
         description:
           "Native-performance cross-platform mobile applications (iOS & Android) using Flutter and React Native.",
         icon: "tabler:device-mobile",
+        features: ["iOS & Android", "Cross-Platform", "User Centric"],
       },
       {
         title: "UI/UX Design",
         description:
           "Intuitive, accessible, and beautiful user interfaces backed by research to ensure a seamless user journey.",
         icon: "tabler:palette",
-      },
-      {
-        title: "SEO & Content Strategy",
-        description:
-          "Data-driven strategies to dominate search rankings, increase organic traffic, and build long-term online authority.",
-        icon: "tabler:seo",
-      },
-      {
-        title: "Digital Marketing",
-        description:
-          "Full-service digital campaigns including social media management, PPC, and email marketing to amplify your brand voice.",
-        icon: "tabler:ad",
+        features: ["User Research", "Wireframing", "Prototyping"],
       },
       {
         title: "E-Commerce Solutions",
         description:
           "Secure, scalable online stores with seamless payment integration designed to maximize sales and manage inventory easily.",
         icon: "tabler:shopping-cart",
+        features: [
+          "Payment Gateways",
+          "Inventory Management",
+          "Secure Checkout",
+        ],
       },
     ]}
+  />
+
+  <!-- Training/Academy Section ************** -->
+  <!-- Training/Academy Section ************** -->
+  <Content
+    id="academy"
+    isReversed
+    tagline="Fishtail Academy"
+    title="Master the Art of Coding"
+    items={[
+      {
+        title: "Project-Based Curriculum",
+        description:
+          "Learn by building real applications. No boring theory—just practical, hands-on coding experience.",
+      },
+      {
+        title: "Industry-Standard Tools",
+        description:
+          "We teach what the industry uses: Git, Docker, Cloud, and modern frameworks.",
+      },
+      {
+        title: "Career Support",
+        description:
+          "From resume building to mock interviews, we help you land your dream job in tech.",
+      },
+    ]}
+    image={{
+      src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      alt: "Students learning to code",
+    }}
   >
+    <Fragment slot="content">
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Launch Your Tech Career
+      </h3>
+      <p class="text-lg text-muted dark:text-slate-400">
+        Join our intensive bootcamps and courses designed to turn beginners into
+        professional developers.
+      </p>
+    </Fragment>
+
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-900">
         <div
-          class="absolute inset-0 dark:bg-gradient-to-tr dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 opacity-40"
+          class="absolute inset-0 bg-gradient-to-tr from-blue-100/50 to-purple-100/50 dark:from-slate-800 dark:to-slate-900"
         >
         </div>
       </div>
     </Fragment>
-  </Services>
+  </Content>
 
   <!-- Content Widget **************** -->
 
@@ -274,6 +257,8 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
+  <!-- Content Widget **************** -->
+
   <Content
     isAfterContent
     items={[
@@ -287,14 +272,13 @@ const metadata = {
           "With over 60% of traffic coming from mobile, we build for smaller screens first, ensuring a flawless experience on phones, tablets, and desktops.",
       },
       {
-        title: "Interactive Animations",
+        title: "Future-Proof Solutions",
         description:
-          "Keep your users glued to the screen with smooth micro-interactions and animations powered by modern CSS and JavaScript libraries.",
+          "We continuously refine and update your website so it stays aligned with the latest trends, technologies, and user expectations.",
       },
       {
-        title: "Brand Consistency",
-        description:
-          "We align every pixel with your brand identity, creating a cohesive visual language that builds trust and recognition immediately.",
+        title: "Ongoing Support",
+        description: `We provide reliable guidance and assistance whenever you need it — ensuring you’re never alone on your digital journey.`,
       },
     ]}
     image={{
@@ -318,159 +302,9 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: "Engaging User Experience",
-        description:
-          "Keep your visitors interested with interactive features, smooth navigation, and modern layouts that encourage them to stay longer.",
-      },
-      {
-        title: "Future-Proof Solutions",
-        description:
-          "We continuously refine and update your website so it stays aligned with the latest trends, technologies, and user expectations.",
-      },
-      {
-        title: "Fast & Efficient Delivery",
-        description:
-          "Save valuable time and resources with our streamlined process — launching your website quickly without compromising quality.",
-      },
-      {
-        title: "Ongoing Support",
-        description: `We provide reliable guidance and assistance whenever you need it — ensuring you’re never alone on your digital journey.`,
-      },
-    ]}
-    image={{
-      src: "https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Team collaboration for growth",
-    }}
-  >
-    <Fragment slot="content">
-      <h3
-        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
-      >
-        Designed to Foster Growth and Success
-      </h3>
-      We focus on building websites that evolve with your business, keeping you competitive
-      in a fast-changing digital world.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Launch Your Dream Website in Just a Few Simple Steps"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Discovery</span>',
-        description:
-          "We start with a strategy call to understand your goals, audience, and vision. This ensures we create a website tailored perfectly to your brand.",
-        icon: "tabler:search",
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Content & Design</span>',
-        description:
-          "Our team designs engaging layouts and adds your content — images, copy, and multimedia — to bring your story to life.",
-        icon: "tabler:layout",
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customization</span>',
-        description:
-          "We fine-tune the styles, colors, and functionality to match your unique identity and deliver a smooth, responsive experience.",
-        icon: "tabler:paint",
-      },
-      {
-        title: '<span class="font-medium">Step 4: Launch!</span>',
-        description:
-          "Once everything looks perfect, we launch your website — fast, secure, and optimized to grow with your business.",
-        icon: "tabler:check",
-      },
-    ]}
-    image={{
-      src: "https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
-      alt: "Website launch process",
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Essential Website Sections"
-    subtitle="We include all the key components your website needs for impact, usability, and conversions."
-    tagline="Components"
-    items={[
-      {
-        title: "Headers",
-        description:
-          "Clear and structured navigation ensures visitors know exactly where to go from the moment they land on your site.",
-        icon: "flat-color-icons:template",
-      },
-      {
-        title: "Hero Sections",
-        description:
-          "Make a strong first impression with visually stunning hero sections that capture attention and communicate your brand instantly.",
-        icon: "flat-color-icons:gallery",
-      },
-      {
-        title: "Features",
-        description:
-          "Highlight your products, services, and unique value with dedicated feature sections that showcase what sets you apart.",
-        icon: "flat-color-icons:approval",
-      },
-      {
-        title: "Content Blocks",
-        description:
-          "Engage your audience with well-structured content sections designed for readability, storytelling, and SEO performance.",
-        icon: "flat-color-icons:document",
-      },
-      {
-        title: "Call-to-Action",
-        description:
-          "Guide visitors toward the next step with clear and persuasive CTAs, designed to boost conversions and engagement.",
-        icon: "flat-color-icons:advertising",
-      },
-      {
-        title: "Pricing Tables",
-        description:
-          "Transparent and attractive pricing layouts help your customers make decisions quickly and confidently.",
-        icon: "flat-color-icons:currency-exchange",
-      },
-      {
-        title: "Testimonials",
-        description:
-          "Build trust and credibility with real customer stories, showcasing the positive impact of your work.",
-        icon: "flat-color-icons:voice-presentation",
-      },
-      {
-        title: "Contact Forms",
-        description:
-          "Make it easy for clients to reach out with user-friendly forms that encourage inquiries and stronger connections.",
-        icon: "flat-color-icons:business-contact",
-      },
-      {
-        title: "Footers",
-        description:
-          "Provide quick access to key links, contact info, and brand details with professional and functional footers.",
-        icon: "flat-color-icons:database",
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
 
   <!-- HighlightedPosts Widget ******* -->
 
