@@ -1,16 +1,17 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import ServicesWidget from '~/components/widgets/Services.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Content from "~/components/widgets/Content.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Testimonials from "~/components/widgets/Testimonials.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import ServicesWidget from "~/components/widgets/Services.astro";
+import Stats from "~/components/widgets/Stats.astro";
 
 const metadata = {
-  title: 'Digital Services - DTKSN',
-  description: 'Professional website development, mobile apps, SEO, and digital marketing services in Nepal. Transform your business with our expert team.',
+  title: "Digital Services - Fishtail Code",
+  description:
+    "Professional website development, mobile apps, SEO, and digital marketing services in Nepal. Transform your business with our expert team.",
 };
 ---
 
@@ -22,27 +23,32 @@ const metadata = {
     title="Transforming Visions into Digital Reality"
     subtitle="Experience world-class web development, stunning designs, and result-driven digital solutions tailored for modern businesses. Your success story starts here."
     actions={[
-      { 
-        variant: 'primary',
-        text: 'Start Your Project',
-        href: '/contact',
-        icon: 'tabler:rocket',
+      {
+        variant: "primary",
+        text: "Start Your Project",
+        href: "/contact",
+        icon: "tabler:rocket",
       },
-      { 
-        variant: 'secondary',
-        text: 'View Our Work',
-        href: '/#portfolio',
-        icon: 'tabler:briefcase'
-      }
+      {
+        variant: "secondary",
+        text: "View Our Work",
+        href: "/#portfolio",
+        icon: "tabler:briefcase",
+      },
     ]}
     image={{
-      src: '~/assets/images/hero-image.png',
-      alt: 'DTKSN Digital Services Showcase',
+      src: "~/assets/images/hero-image.png",
+      alt: "Fishtail Code Digital Services Showcase",
     }}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-100 dark:from-slate-900 dark:to-slate-800">
-        <div class="absolute inset-0 bg-grid-pattern opacity-10 dark:opacity-20"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-blue-50 to-blue-100 dark:from-slate-900 dark:to-slate-800"
+      >
+        <div
+          class="absolute inset-0 bg-grid-pattern opacity-10 dark:opacity-20"
+        >
+        </div>
       </div>
     </Fragment>
   </Hero>
@@ -53,9 +59,14 @@ const metadata = {
       <div class="pr-16 sm:text-center sm:px-16">
         <p class="font-medium text-white">
           <span class="md:hidden">Limited Time Offer!</span>
-          <span class="hidden md:inline">Special Launch Offer: Get 20% off on all website development packages!</span>
+          <span class="hidden md:inline"
+            >Special Launch Offer: Get 20% off on all website development
+            packages!</span
+          >
           <span class="block sm:ml-2 sm:inline-block">
-            <a href="/contact" class="text-white font-bold underline">Learn more →</a>
+            <a href="/contact" class="text-white font-bold underline"
+              >Learn more →</a
+            >
           </span>
         </p>
       </div>
@@ -80,39 +91,40 @@ const metadata = {
     columns={3}
     items={[
       {
-        title: 'Local Expertise',
+        title: "Local Expertise",
         description:
-          'Based in Nepal, we understand the local market dynamics and can tailor solutions that work specifically for Nepali businesses and their unique challenges.',
-        icon: 'tabler:map-pin',
+          "Based in Nepal, we understand the local market dynamics and can tailor solutions that work specifically for Nepali businesses and their unique challenges.",
+        icon: "tabler:map-pin",
       },
       {
-        title: 'Modern Technology',
+        title: "Modern Technology",
         description:
-          'We use the latest technologies like React, Node.js, and cloud platforms to ensure your digital solutions are future-proof and scalable.',
-        icon: 'tabler:code',
+          "We use the latest technologies like React, Node.js, and cloud platforms to ensure your digital solutions are future-proof and scalable.",
+        icon: "tabler:code",
       },
       {
-        title: 'Affordable Pricing',
-        description: 'Quality digital services at competitive Nepali market rates. We believe every business deserves professional digital solutions without breaking the bank.',
-        icon: 'tabler:coin',
+        title: "Affordable Pricing",
+        description:
+          "Quality digital services at competitive Nepali market rates. We believe every business deserves professional digital solutions without breaking the bank.",
+        icon: "tabler:coin",
       },
       {
-        title: '24/7 Support',
+        title: "24/7 Support",
         description:
-          'Round-the-clock support in Nepali timezone, ensuring your business never faces downtime. We are here when you need us.',
-        icon: 'tabler:headset',
+          "Round-the-clock support in Nepali timezone, ensuring your business never faces downtime. We are here when you need us.",
+        icon: "tabler:headset",
       },
       {
-        title: 'Quick Delivery',
+        title: "Quick Delivery",
         description:
-          'Fast turnaround times without compromising quality. We understand that in business, time is money, and we respect both.',
-        icon: 'tabler:rocket',
+          "Fast turnaround times without compromising quality. We understand that in business, time is money, and we respect both.",
+        icon: "tabler:rocket",
       },
       {
-        title: 'Ongoing Maintenance',
+        title: "Ongoing Maintenance",
         description:
-          'We do not just build and leave. We provide ongoing maintenance, updates, and support to keep your digital assets running smoothly.',
-        icon: 'tabler:tools',
+          "We do not just build and leave. We provide ongoing maintenance, updates, and support to keep your digital assets running smoothly.",
+        icon: "tabler:tools",
       },
     ]}
   />
@@ -123,39 +135,45 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Custom Website Development',
+        title: "Custom Website Development",
         description:
-          'Professional, responsive websites built with modern technologies. From simple business sites to complex e-commerce platforms.',
-        icon: 'tabler:world',
+          "Professional, responsive websites built with modern technologies. From simple business sites to complex e-commerce platforms.",
+        icon: "tabler:world",
       },
       {
-        title: 'Mobile App Development',
+        title: "Mobile App Development",
         description:
-          'Native and cross-platform mobile applications for iOS and Android. We build apps that users love and businesses rely on.',
-        icon: 'tabler:device-mobile',
+          "Native and cross-platform mobile applications for iOS and Android. We build apps that users love and businesses rely on.",
+        icon: "tabler:device-mobile",
       },
       {
-        title: 'SEO & Digital Marketing',
+        title: "SEO & Digital Marketing",
         description:
-          'Comprehensive digital marketing strategies including SEO, social media marketing, and content marketing to grow your online presence.',
-        icon: 'tabler:chart-line',
+          "Comprehensive digital marketing strategies including SEO, social media marketing, and content marketing to grow your online presence.",
+        icon: "tabler:chart-line",
       },
       {
-        title: 'E-commerce Solutions',
+        title: "E-commerce Solutions",
         description:
-          'Complete online store development with payment gateways, inventory management, and marketing tools to boost your sales.',
-        icon: 'tabler:shopping-cart',
+          "Complete online store development with payment gateways, inventory management, and marketing tools to boost your sales.",
+        icon: "tabler:shopping-cart",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Digital Services Features',
+      src: "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      alt: "Digital Services Features",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Core Services</h3>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Our Core Services
+      </h3>
       <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-        We specialize in creating digital solutions that not only look great but also drive real business results. Our team combines technical expertise with creative design to deliver exceptional user experiences.
+        We specialize in creating digital solutions that not only look great but
+        also drive real business results. Our team combines technical expertise
+        with creative design to deliver exceptional user experiences.
       </p>
     </Fragment>
   </Content>
@@ -166,39 +184,45 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Local Market Understanding',
+        title: "Local Market Understanding",
         description:
-          'We know the Nepali business landscape, cultural nuances, and local competition, allowing us to create strategies that resonate with your target audience.',
-        icon: 'tabler:target',
+          "We know the Nepali business landscape, cultural nuances, and local competition, allowing us to create strategies that resonate with your target audience.",
+        icon: "tabler:target",
       },
       {
-        title: 'Cost-Effective Solutions',
+        title: "Cost-Effective Solutions",
         description:
-          'Get premium digital services at competitive Nepali market rates. We believe quality should not be compromised by budget constraints.',
-        icon: 'tabler:wallet',
+          "Get premium digital services at competitive Nepali market rates. We believe quality should not be compromised by budget constraints.",
+        icon: "tabler:wallet",
       },
       {
-        title: 'Quick Implementation',
+        title: "Quick Implementation",
         description:
-          'Fast delivery without sacrificing quality. We understand that in todays fast-paced business environment, speed to market is crucial.',
-        icon: 'tabler:clock',
+          "Fast delivery without sacrificing quality. We understand that in todays fast-paced business environment, speed to market is crucial.",
+        icon: "tabler:clock",
       },
       {
-        title: 'Ongoing Partnership',
+        title: "Ongoing Partnership",
         description:
-          'We build long-term relationships with our clients, providing continuous support and updates to ensure your digital success.',
-        icon: 'tabler:users',
+          "We build long-term relationships with our clients, providing continuous support and updates to ensure your digital success.",
+        icon: "tabler:users",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits of Working with Us',
+      src: "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+      alt: "Benefits of Working with Us",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Work With Us?</h3>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Why Work With Us?
+      </h3>
       <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-        Choosing DTKSN means choosing a partner who understands your business needs, speaks your language, and delivers results that exceed expectations.
+        Choosing Fishtail Code means choosing a partner who understands your
+        business needs, speaks your language, and delivers results that exceed
+        expectations.
       </p>
     </Fragment>
   </Content>
@@ -207,10 +231,10 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Projects Completed', amount: '150+' },
-      { title: 'Happy Clients', amount: '120+' },
-      { title: 'Years Experience', amount: '4+' },
-      { title: 'Support Hours', amount: '24/7' },
+      { title: "Projects Completed", amount: "150+" },
+      { title: "Happy Clients", amount: "120+" },
+      { title: "Years Experience", amount: "4+" },
+      { title: "Support Hours", amount: "24/7" },
     ]}
   />
 
@@ -221,38 +245,41 @@ const metadata = {
     subtitle="Real feedback from businesses we have helped grow"
     testimonials={[
       {
-        testimonial: 'DTKSN transformed our business with a professional website and digital marketing strategy. Our online presence has never been stronger, and we are seeing real growth in our customer base. Highly recommended!',
-        name: 'Rajesh Shrestha',
-        job: 'Owner, Himalayan Crafts',
+        testimonial:
+          "Fishtail Code transformed our business with a professional website and digital marketing strategy. Our online presence has never been stronger, and we are seeing real growth in our customer base. Highly recommended!",
+        name: "Rajesh Shrestha",
+        job: "Owner, Himalayan Crafts",
         image: {
-          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Rajesh Shrestha',
+          src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80",
+          alt: "Rajesh Shrestha",
         },
       },
       {
-        testimonial: 'The team at DTKSN delivered our e-commerce website on time and within budget. The site looks professional and functions perfectly. Our online sales have increased by 300% since launch.',
-        name: 'Priya Tamang',
-        job: 'Founder, Nepali Fashion',
+        testimonial:
+          "The team at Fishtail Code delivered our e-commerce website on time and within budget. The site looks professional and functions perfectly. Our online sales have increased by 300% since launch.",
+        name: "Priya Tamang",
+        job: "Founder, Nepali Fashion",
         image: {
-          src: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Priya Tamang',
+          src: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+          alt: "Priya Tamang",
         },
       },
       {
-        testimonial: 'As a startup, we needed a mobile app that could compete with established players. DTKSN delivered exactly what we needed - a fast, user-friendly app that our customers love.',
-        name: 'Amit Thapa',
-        job: 'CEO, FoodDelivery Nepal',
+        testimonial:
+          "As a startup, we needed a mobile app that could compete with established players. Fishtail Code delivered exactly what we needed - a fast, user-friendly app that our customers love.",
+        name: "Amit Thapa",
+        job: "CEO, FoodDelivery Nepal",
         image: {
-          src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Amit Thapa',
+          src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80",
+          alt: "Amit Thapa",
         },
       },
     ]}
     callToAction={{
-      target: '_blank',
-      text: 'View More Reviews',
-      href: '/testimonials',
-      icon: 'tabler:chevron-right',
+      target: "_blank",
+      text: "View More Reviews",
+      href: "/testimonials",
+      icon: "tabler:chevron-right",
     }}
   />
 
@@ -261,10 +288,10 @@ const metadata = {
   <CallToAction
     actions={[
       {
-        variant: 'primary',
-        text: 'Start Your Project',
-        href: '/contact',
-        icon: 'tabler:rocket',
+        variant: "primary",
+        text: "Start Your Project",
+        href: "/contact",
+        icon: "tabler:rocket",
       },
     ]}
     title="Ready to Transform Your Business?"

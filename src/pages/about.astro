@@ -1,16 +1,17 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from "~/components/widgets/Features2.astro";
+import Features3 from "~/components/widgets/Features3.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import Steps2 from "~/components/widgets/Steps2.astro";
+import Layout from "~/layouts/PageLayout.astro";
+import Content from "~/components/widgets/Content.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
 
 const metadata = {
-  title: 'About DTKSN - Leading Digital Agency in Nepal',
-  description: 'Learn about DTKSN, a premier digital agency in Nepal specializing in website development, mobile apps, and digital marketing. Our story of innovation and growth.',
+  title: "About Fishtail Code - Leading Digital Agency in Nepal",
+  description:
+    "Learn about Fishtail Code, a premier digital agency in Nepal specializing in website development, mobile apps, and digital marketing. Our story of innovation and growth.",
 };
 ---
 
@@ -18,10 +19,10 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About DTKSN"
+    tagline="About Fishtail Code"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'DTKSN Team',
+      src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Fishtail Code Team",
     }}
   >
     <Fragment slot="title">
@@ -30,7 +31,11 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Founded in 2020, DTKSN has been at the forefront of digital transformation in Nepal. We're a team of passionate developers, designers, and marketers dedicated to helping businesses thrive in the digital age. From startups to established enterprises, we've been the trusted partner for over 150+ businesses across Nepal and beyond.
+      Founded in 2020, Fishtail Code has been at the forefront of digital
+      transformation in Nepal. We're a team of passionate developers, designers,
+      and marketers dedicated to helping businesses thrive in the digital age.
+      From startups to established enterprises, we've been the trusted partner
+      for over 150+ businesses across Nepal and beyond.
     </Fragment>
   </Hero>
 
@@ -39,10 +44,10 @@ const metadata = {
   <Stats
     title="Our Journey in Numbers"
     stats={[
-      { title: 'Projects Delivered', amount: '150+' },
-      { title: 'Happy Clients', amount: '120+' },
-      { title: 'Team Members', amount: '12' },
-      { title: 'Years of Excellence', amount: '4+' },
+      { title: "Projects Delivered", amount: "150+" },
+      { title: "Happy Clients", amount: "120+" },
+      { title: "Team Members", amount: "12" },
+      { title: "Years of Excellence", amount: "4+" },
     ]}
   />
 
@@ -52,30 +57,37 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Our Mission',
+        title: "Our Mission",
         description:
-          'To democratize digital excellence by providing world-class digital solutions at accessible prices, enabling every business in Nepal to compete globally.',
+          "To democratize digital excellence by providing world-class digital solutions at accessible prices, enabling every business in Nepal to compete globally.",
       },
       {
-        title: 'Our Vision',
+        title: "Our Vision",
         description:
-          'To be the most trusted digital partner for businesses in Nepal, known for innovation, quality, and unwavering commitment to client success.',
+          "To be the most trusted digital partner for businesses in Nepal, known for innovation, quality, and unwavering commitment to client success.",
       },
       {
-        title: 'Our Values',
+        title: "Our Values",
         description:
-          'Integrity, innovation, excellence, and client-centricity form the foundation of everything we do at DTKSN.',
+          "Integrity, innovation, excellence, and client-centricity form the foundation of everything we do at Fishtail Code.",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'DTKSN Mission',
+      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      alt: "Fishtail Code Mission",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What Drives Us</h3>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        What Drives Us
+      </h3>
       <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-        At DTKSN, we believe that every business deserves access to world-class digital solutions. Our mission is to bridge the gap between local businesses and global digital standards, ensuring that Nepali companies can compete effectively in the international marketplace.
+        At Fishtail Code, we believe that every business deserves access to
+        world-class digital solutions. Our mission is to bridge the gap between
+        local businesses and global digital standards, ensuring that Nepali
+        companies can compete effectively in the international marketplace.
       </p>
     </Fragment>
   </Content>
@@ -88,22 +100,22 @@ const metadata = {
     isBeforeContent={true}
     items={[
       {
-        title: 'Local Market Expertise',
+        title: "Local Market Expertise",
         description:
-          'Deep understanding of Nepali business culture, market dynamics, and consumer behavior. We speak your language and understand your challenges.',
-        icon: 'tabler:map-pin',
+          "Deep understanding of Nepali business culture, market dynamics, and consumer behavior. We speak your language and understand your challenges.",
+        icon: "tabler:map-pin",
       },
       {
-        title: 'Global Technology Standards',
+        title: "Global Technology Standards",
         description:
-          'We use cutting-edge technologies and follow international best practices to ensure your digital solutions meet global standards.',
-        icon: 'tabler:world',
+          "We use cutting-edge technologies and follow international best practices to ensure your digital solutions meet global standards.",
+        icon: "tabler:world",
       },
       {
-        title: 'Affordable Excellence',
+        title: "Affordable Excellence",
         description:
-          'Premium quality digital services at competitive Nepali market rates. We believe excellence shouldn\'t be limited by budget constraints.',
-        icon: 'tabler:coin',
+          "Premium quality digital services at competitive Nepali market rates. We believe excellence shouldn't be limited by budget constraints.",
+        icon: "tabler:coin",
       },
     ]}
   />
@@ -115,45 +127,45 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: '24/7 Support',
+        title: "24/7 Support",
         description:
-          'Round-the-clock support in Nepali timezone. We\'re here when you need us, ensuring your business never faces unnecessary downtime.',
-        icon: 'tabler:headset',
+          "Round-the-clock support in Nepali timezone. We're here when you need us, ensuring your business never faces unnecessary downtime.",
+        icon: "tabler:headset",
       },
       {
-        title: 'Quick Delivery',
+        title: "Quick Delivery",
         description:
-          'Fast turnaround times without compromising quality. We understand that in business, time is money, and we respect both.',
-        icon: 'tabler:rocket',
+          "Fast turnaround times without compromising quality. We understand that in business, time is money, and we respect both.",
+        icon: "tabler:rocket",
       },
       {
-        title: 'Ongoing Partnership',
+        title: "Ongoing Partnership",
         description:
-          'We build long-term relationships with our clients, providing continuous support and updates to ensure your digital success.',
-        icon: 'tabler:users',
+          "We build long-term relationships with our clients, providing continuous support and updates to ensure your digital success.",
+        icon: "tabler:users",
       },
       {
-        title: 'Custom Solutions',
+        title: "Custom Solutions",
         description:
-          'Every project is unique. We create tailored solutions that perfectly align with your business goals and target audience.',
-        icon: 'tabler:settings',
+          "Every project is unique. We create tailored solutions that perfectly align with your business goals and target audience.",
+        icon: "tabler:settings",
       },
       {
-        title: 'SEO & Marketing',
+        title: "SEO & Marketing",
         description:
-          'Comprehensive digital marketing strategies that drive real results, helping you reach and engage your target audience effectively.',
-        icon: 'tabler:chart-line',
+          "Comprehensive digital marketing strategies that drive real results, helping you reach and engage your target audience effectively.",
+        icon: "tabler:chart-line",
       },
       {
-        title: 'Mobile-First Design',
+        title: "Mobile-First Design",
         description:
-          'All our solutions are designed mobile-first, ensuring optimal performance across all devices and screen sizes.',
-        icon: 'tabler:device-mobile',
+          "All our solutions are designed mobile-first, ensuring optimal performance across all devices and screen sizes.",
+        icon: "tabler:device-mobile",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'DTKSN Services',
+      src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+      alt: "Fishtail Code Services",
     }}
   />
 
@@ -164,24 +176,24 @@ const metadata = {
     subtitle="A proven methodology that ensures successful project delivery and client satisfaction"
     items={[
       {
-        title: 'Discovery & Planning',
+        title: "Discovery & Planning",
         description:
-          'We start by understanding your business, goals, target audience, and competition. This foundation ensures we create solutions that truly serve your needs.',
+          "We start by understanding your business, goals, target audience, and competition. This foundation ensures we create solutions that truly serve your needs.",
       },
       {
-        title: 'Design & Development',
+        title: "Design & Development",
         description:
-          'Our expert team creates stunning designs and develops robust solutions using the latest technologies, ensuring both beauty and functionality.',
+          "Our expert team creates stunning designs and develops robust solutions using the latest technologies, ensuring both beauty and functionality.",
       },
       {
-        title: 'Testing & Quality Assurance',
+        title: "Testing & Quality Assurance",
         description:
-          'Rigorous testing across all devices and browsers ensures your digital solution works flawlessly for every user, every time.',
+          "Rigorous testing across all devices and browsers ensures your digital solution works flawlessly for every user, every time.",
       },
       {
-        title: 'Launch & Support',
+        title: "Launch & Support",
         description:
-          'We launch your project with full support and provide ongoing maintenance to ensure long-term success and growth.',
+          "We launch your project with full support and provide ongoing maintenance to ensure long-term success and growth.",
       },
     ]}
   />
@@ -193,26 +205,27 @@ const metadata = {
     subtitle="Milestones that showcase our commitment to excellence and innovation"
     isReversed={true}
     callToAction={{
-      text: 'View Our Work',
-      href: '/portfolio',
+      text: "View Our Work",
+      href: "/portfolio",
     }}
     items={[
       {
-        title: '150+ Successful Projects',
-        description: 'From simple websites to complex e-commerce platforms, we\'ve delivered solutions that drive real business results.',
-        icon: 'tabler:check',
+        title: "150+ Successful Projects",
+        description:
+          "From simple websites to complex e-commerce platforms, we've delivered solutions that drive real business results.",
+        icon: "tabler:check",
       },
       {
-        title: '120+ Satisfied Clients',
+        title: "120+ Satisfied Clients",
         description:
-          'Our client retention rate speaks volumes about our commitment to quality and customer satisfaction.',
-        icon: 'tabler:heart',
+          "Our client retention rate speaks volumes about our commitment to quality and customer satisfaction.",
+        icon: "tabler:heart",
       },
       {
-        title: 'Industry Recognition',
+        title: "Industry Recognition",
         description:
-          'Awarded as one of the top digital agencies in Nepal, recognized for innovation and excellence in digital solutions.',
-        icon: 'tabler:award',
+          "Awarded as one of the top digital agencies in Nepal, recognized for innovation and excellence in digital solutions.",
+        icon: "tabler:award",
       },
     ]}
   />
@@ -225,24 +238,24 @@ const metadata = {
     columns={4}
     items={[
       {
-        title: 'Kathmandu Valley',
-        description: 'Central hub for major businesses and startups',
-        icon: 'tabler:map-pin',
+        title: "Kathmandu Valley",
+        description: "Central hub for major businesses and startups",
+        icon: "tabler:map-pin",
       },
       {
-        title: 'Pokhara',
-        description: 'Growing business community and tourism sector',
-        icon: 'tabler:map-pin',
+        title: "Pokhara",
+        description: "Growing business community and tourism sector",
+        icon: "tabler:map-pin",
       },
       {
-        title: 'Biratnagar',
-        description: 'Industrial and commercial business center',
-        icon: 'tabler:map-pin',
+        title: "Biratnagar",
+        description: "Industrial and commercial business center",
+        icon: "tabler:map-pin",
       },
       {
-        title: 'Online Services',
-        description: 'Remote services for businesses worldwide',
-        icon: 'tabler:globe',
+        title: "Online Services",
+        description: "Remote services for businesses worldwide",
+        icon: "tabler:globe",
       },
     ]}
   />
@@ -255,16 +268,16 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: 'Live Chat Support',
+        title: "Live Chat Support",
         description:
-          'Get instant answers to your questions through our live chat system. Our team is available during business hours to assist you.',
-        icon: 'tabler:messages',
+          "Get instant answers to your questions through our live chat system. Our team is available during business hours to assist you.",
+        icon: "tabler:messages",
       },
       {
-        title: 'Phone & WhatsApp',
+        title: "Phone & WhatsApp",
         description:
-          'Call us directly or reach out via WhatsApp for immediate assistance. We\'re here to help you succeed.',
-        icon: 'tabler:phone',
+          "Call us directly or reach out via WhatsApp for immediate assistance. We're here to help you succeed.",
+        icon: "tabler:phone",
       },
     ]}
   />
@@ -274,10 +287,10 @@ const metadata = {
   <CallToAction
     actions={[
       {
-        variant: 'primary',
-        text: 'Start Your Project',
-        href: '/contact',
-        icon: 'tabler:rocket',
+        variant: "primary",
+        text: "Start Your Project",
+        href: "/contact",
+        icon: "tabler:rocket",
       },
     ]}
     title="Ready to Work With Us?"

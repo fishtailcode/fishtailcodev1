@@ -1,15 +1,15 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
-import Hero from '~/components/widgets/Hero.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Services from '~/components/widgets/Services.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from "~/components/widgets/Hero.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+import Services from "~/components/widgets/Services.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Content from "~/components/widgets/Content.astro";
+import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
+import FAQs from "~/components/widgets/FAQs.astro";
+import Stats from "~/components/widgets/Stats.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
 
 const metadata = {
   title: "Let's build your website together. You're in good hands.",
@@ -23,22 +23,29 @@ const metadata = {
   <Hero
     actions={[
       {
-        variant: 'primary',
-        text: 'Hire Us for Development',
-        href: '/services',
-        icon: 'tabler:briefcase',
+        variant: "primary",
+        text: "Hire Us for Development",
+        href: "/services",
+        icon: "tabler:briefcase",
       },
       {
-        text: 'Browse IT Courses',
-        href: '/courses',
-        target: '_blank',
-        icon: 'tabler:device-laptop',
+        text: "Browse IT Courses",
+        href: "/courses",
+        target: "_blank",
+        icon: "tabler:device-laptop",
       },
     ]}
-    image={{ src: '~/assets/images/hero-image-1.png', alt: 'DTKSN digital solutions and training' }}
+    image={{
+      src: "~/assets/images/hero-image-1.png",
+      alt: "Fishtail Code digital solutions and training",
+    }}
   >
     <Fragment slot="title">
-      <span class="text-2xl tracking-wider text-blue-600 uppercase font-bold mb-4 block"> Welcome to DTKSN </span>
+      <span
+        class="text-2xl tracking-wider text-blue-600 uppercase font-bold mb-4 block"
+      >
+        Welcome to Fishtail Code
+      </span>
       We Engineer Digital Excellence. <br class="hidden lg:inline" />
       <span
         class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-700 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400"
@@ -49,10 +56,14 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Bridge the gap between <strong>ideas and reality</strong>. Whether you are a startup needing a scalable app, or
-        a student seeking a career in code, <span class="font-semibold">DTKSN</span> is your partner in innovation.
+        Bridge the gap between <strong>ideas and reality</strong>. Whether you
+        are a startup needing a scalable app, or a student seeking a career in
+        code, <span class="font-semibold">Fishtail Code</span> is your partner in
+        innovation.
       </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600"> Software Services & IT Academy. </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">
+        Software Services & IT Academy.
+      </span>
       Your destination for top-tier Software Development and Industry-Standard Training.
     </Fragment>
   </Hero>
@@ -60,82 +71,87 @@ const metadata = {
 
   <Features2
     id="features"
-    title="Why Choose DTKSN?"
+    title="Why Choose Fishtail Code?"
     subtitle="We bridge the gap between industry demand and technical expertise."
     tagline="Our Ecosystem"
     items={[
       {
-        title: 'Custom Software Engineering',
+        title: "Custom Software Engineering",
         description:
           "We don't just write code; we build business solutions. From high-performance websites to complex SaaS platforms, we engineer software that scales.",
-        icon: 'tabler:code',
+        icon: "tabler:code",
         callToAction: {
-          text: 'For Businesses',
-          href: '/services',
+          text: "For Businesses",
+          href: "/services",
         },
       },
       {
-        title: 'Project-Based Learning',
+        title: "Project-Based Learning",
         description:
-          'Forget theory-only lectures. Our students learn by building real-world applications, gaining the practical experience top employers demand.',
-        icon: 'tabler:school',
+          "Forget theory-only lectures. Our students learn by building real-world applications, gaining the practical experience top employers demand.",
+        icon: "tabler:school",
         callToAction: {
-          text: 'For Students',
-          href: '/courses',
+          text: "For Students",
+          href: "/courses",
         },
       },
       {
-        title: 'Modern Tech Stack',
+        title: "Modern Tech Stack",
         description:
-          'Whether building for clients or teaching students, we use the latest tools: React, Next.js, Tailwind, Python, and Cloud technologies.',
-        icon: 'tabler:stack-2',
+          "Whether building for clients or teaching students, we use the latest tools: React, Next.js, Tailwind, Python, and Cloud technologies.",
+        icon: "tabler:stack-2",
         callToAction: {
-          text: 'See Our Tech',
-          href: '#',
+          text: "See Our Tech",
+          href: "#",
         },
       },
       {
-        title: 'Career-Focused Mentorship',
+        title: "Career-Focused Mentorship",
         description:
-          'We provide more than just classes. Students get resume reviews, mock interviews, and direct mentorship from working professionals.',
-        icon: 'tabler:users',
+          "We provide more than just classes. Students get resume reviews, mock interviews, and direct mentorship from working professionals.",
+        icon: "tabler:users",
         callToAction: {
-          text: 'Career Support',
-          href: '#',
+          text: "Career Support",
+          href: "#",
         },
       },
       {
-        title: 'Performance & SEO',
+        title: "Performance & SEO",
         description:
-          'Our development philosophy prioritizes Core Web Vitals and SEO. We ensure your digital presence is blazing fast and easily discoverable.',
-        icon: 'tabler:rocket',
+          "Our development philosophy prioritizes Core Web Vitals and SEO. We ensure your digital presence is blazing fast and easily discoverable.",
+        icon: "tabler:rocket",
         callToAction: {
-          text: 'View Metrics',
-          href: '#',
+          text: "View Metrics",
+          href: "#",
         },
       },
       {
-        title: 'Long-Term Partnership',
+        title: "Long-Term Partnership",
         description:
-          'For clients, we offer dedicated maintenance. For students, we offer lifetime community access. We are committed to your long-term success.',
-        icon: 'tabler:heart-handshake',
+          "For clients, we offer dedicated maintenance. For students, we offer lifetime community access. We are committed to your long-term success.",
+        icon: "tabler:heart-handshake",
         callToAction: {
-          text: 'Contact Us',
-          href: '/contact',
+          text: "Contact Us",
+          href: "/contact",
         },
       },
     ]}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-slate-900">
-        <div class="absolute inset-0 bg-gradient-to-br from-transparent to-blue-100 dark:to-slate-800"></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-transparent to-blue-100 dark:to-slate-800"
+        >
+        </div>
       </div>
     </Fragment>
     <Fragment slot="subtitle">
       <span class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-        Whether you are a startup founder looking for a <span class="font-semibold text-blue-600">dev team</span>, or a
-        student looking for a <span class="font-semibold text-purple-600">mentor</span>, DTKSN delivers excellence
-        through:
+        Whether you are a startup founder looking for a <span
+          class="font-semibold text-blue-600">dev team</span
+        >, or a student looking for a <span
+          class="font-semibold text-purple-600">mentor</span
+        >, Fishtail Code delivers excellence through:
         <br />
         <span class="font-semibold text-primary">Innovation</span> •
         <span class="font-semibold text-primary">Education</span> •
@@ -145,98 +161,109 @@ const metadata = {
   </Features2>
 
   <!-- Services Widget *************** -->
-   <Services
+  <Services
     id="services"
     tagline="Services"
     title="Our Digital Services"
     subtitle="Comprehensive solutions to grow your business online. We blend creativity with technical expertise."
     columns={3}
     classes={{
-      container: 'max-w-7xl mx-auto',
+      container: "max-w-7xl mx-auto",
       panel:
-        'group relative rounded-3xl p-6 bg-white dark:bg-slate-900 shadow-xl shadow-gray-100/50 dark:shadow-slate-800/90 border border-transparent dark:border-slate-800 transition duration-300 hover:-translate-y-2 overflow-hidden hover:border-blue-500/50 dark:hover:border-blue-400/50',
-      icon: 'w-12 h-12 mb-4 text-blue-600 dark:text-blue-400 p-2 rounded-xl bg-blue-50 dark:bg-slate-800 group-hover:bg-blue-600 group-hover:text-white transition duration-300',
+        "group relative rounded-3xl p-6 bg-white dark:bg-slate-900 shadow-xl shadow-gray-100/50 dark:shadow-slate-800/90 border border-transparent dark:border-slate-800 transition duration-300 hover:-translate-y-2 overflow-hidden hover:border-blue-500/50 dark:hover:border-blue-400/50",
+      icon: "w-12 h-12 mb-4 text-blue-600 dark:text-blue-400 p-2 rounded-xl bg-blue-50 dark:bg-slate-800 group-hover:bg-blue-600 group-hover:text-white transition duration-300",
     }}
     items={[
       {
-        title: 'Custom Web Development',
+        title: "Custom Web Development",
         description:
-          'Blazing-fast, SEO-optimized websites built with modern tech (Astro, React, Next.js) designed to convert visitors into customers.',
-        icon: 'tabler:browser',
+          "Blazing-fast, SEO-optimized websites built with modern tech (Astro, React, Next.js) designed to convert visitors into customers.",
+        icon: "tabler:browser",
       },
       {
-        title: 'Mobile App Development',
+        title: "Mobile App Development",
         description:
-          'Native-performance cross-platform mobile applications (iOS & Android) using Flutter and React Native.',
-        icon: 'tabler:device-mobile',
+          "Native-performance cross-platform mobile applications (iOS & Android) using Flutter and React Native.",
+        icon: "tabler:device-mobile",
       },
       {
-        title: 'UI/UX Design',
+        title: "UI/UX Design",
         description:
-          'Intuitive, accessible, and beautiful user interfaces backed by research to ensure a seamless user journey.',
-        icon: 'tabler:palette',
+          "Intuitive, accessible, and beautiful user interfaces backed by research to ensure a seamless user journey.",
+        icon: "tabler:palette",
       },
       {
-        title: 'SEO & Content Strategy',
+        title: "SEO & Content Strategy",
         description:
-          'Data-driven strategies to dominate search rankings, increase organic traffic, and build long-term online authority.',
-        icon: 'tabler:seo',
+          "Data-driven strategies to dominate search rankings, increase organic traffic, and build long-term online authority.",
+        icon: "tabler:seo",
       },
       {
-        title: 'Digital Marketing',
+        title: "Digital Marketing",
         description:
-          'Full-service digital campaigns including social media management, PPC, and email marketing to amplify your brand voice.',
-        icon: 'tabler:ad',
+          "Full-service digital campaigns including social media management, PPC, and email marketing to amplify your brand voice.",
+        icon: "tabler:ad",
       },
       {
-        title: 'E-Commerce Solutions',
+        title: "E-Commerce Solutions",
         description:
-          'Secure, scalable online stores with seamless payment integration designed to maximize sales and manage inventory easily.',
-        icon: 'tabler:shopping-cart',
+          "Secure, scalable online stores with seamless payment integration designed to maximize sales and manage inventory easily.",
+        icon: "tabler:shopping-cart",
       },
     ]}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent">
-        <div class="absolute inset-0 dark:bg-gradient-to-tr dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 opacity-40"></div>
+        <div
+          class="absolute inset-0 dark:bg-gradient-to-tr dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 opacity-40"
+        >
+        </div>
       </div>
     </Fragment>
   </Services>
 
   <!-- Content Widget **************** -->
 
-<Content
+  <Content
     isReversed
     tagline="Our Tech Stack"
     title="Innovation Powered by Modern Technology"
     items={[
       {
-        title: 'State-of-the-Art Frontend',
+        title: "State-of-the-Art Frontend",
         description:
-          'We build (and teach) using React, Next.js, and Astro. This ensures your applications are blazing fast, SEO-friendly, and offer an incredible user experience.',
+          "We build (and teach) using React, Next.js, and Astro. This ensures your applications are blazing fast, SEO-friendly, and offer an incredible user experience.",
       },
       {
-        title: 'Scalable Backend & Cloud',
+        title: "Scalable Backend & Cloud",
         description:
-          'Reliability is key. We leverage Python, Node.js, and AWS/Azure cloud infrastructure to ensure your systems can handle growth without breaking a sweat.',
+          "Reliability is key. We leverage Python, Node.js, and AWS/Azure cloud infrastructure to ensure your systems can handle growth without breaking a sweat.",
       },
       {
-        title: 'Cross-Platform Mobile',
+        title: "Cross-Platform Mobile",
         description:
-          'Reach users everywhere. We specialize in Flutter and React Native, allowing you to launch high-quality apps on both iOS and Android from a single codebase.',
+          "Reach users everywhere. We specialize in Flutter and React Native, allowing you to launch high-quality apps on both iOS and Android from a single codebase.",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'DTKSN Developer working on modern code stack',
+      src: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      alt: "Fishtail Code Developer working on modern code stack",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        We Speak the Language of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Future Tech.</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        We Speak the Language of <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+          >Future Tech.</span
+        >
       </h3>
       <p class="text-lg text-muted dark:text-slate-400">
-        At DTKSN, we don't rely on outdated tools. Whether we are building your product or training your future career, we stick to the <strong>cutting edge</strong>.
+        At Fishtail Code, we don't rely on outdated tools. Whether we are
+        building your product or training your future career, we stick to the <strong
+          >cutting edge</strong
+        >.
       </p>
     </Fragment>
 
@@ -247,40 +274,46 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-<Content
+  <Content
     isAfterContent
     items={[
       {
-        title: 'Strategic UI/UX Design',
+        title: "Strategic UI/UX Design",
         description: `We don't just design for looks; we design for behavior. Every layout is crafted to guide your visitors toward making a purchase or contacting you.`,
       },
       {
-        title: 'Mobile-First Architecture',
+        title: "Mobile-First Architecture",
         description:
-          'With over 60% of traffic coming from mobile, we build for smaller screens first, ensuring a flawless experience on phones, tablets, and desktops.',
+          "With over 60% of traffic coming from mobile, we build for smaller screens first, ensuring a flawless experience on phones, tablets, and desktops.",
       },
       {
-        title: 'Interactive Animations',
+        title: "Interactive Animations",
         description:
-          'Keep your users glued to the screen with smooth micro-interactions and animations powered by modern CSS and JavaScript libraries.',
+          "Keep your users glued to the screen with smooth micro-interactions and animations powered by modern CSS and JavaScript libraries.",
       },
       {
-        title: 'Brand Consistency',
+        title: "Brand Consistency",
         description:
-          'We align every pixel with your brand identity, creating a cohesive visual language that builds trust and recognition immediately.',
+          "We align every pixel with your brand identity, creating a cohesive visual language that builds trust and recognition immediately.",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Tech Fytra UI/UX Design Process',
+      src: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2194&q=80",
+      alt: "Tech Fytra UI/UX Design Process",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Design That <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Captivates & Converts.</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Design That <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600"
+          >Captivates & Converts.</span
+        >
       </h3>
       <p class="text-lg text-muted dark:text-slate-400">
-        A great website needs more than just clean code. It needs a soul. We craft digital experiences that look stunning and perform perfectly.
+        A great website needs more than just clean code. It needs a soul. We
+        craft digital experiences that look stunning and perform perfectly.
       </p>
     </Fragment>
 
@@ -296,35 +329,38 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Engaging User Experience',
+        title: "Engaging User Experience",
         description:
-          'Keep your visitors interested with interactive features, smooth navigation, and modern layouts that encourage them to stay longer.',
+          "Keep your visitors interested with interactive features, smooth navigation, and modern layouts that encourage them to stay longer.",
       },
       {
-        title: 'Future-Proof Solutions',
+        title: "Future-Proof Solutions",
         description:
-          'We continuously refine and update your website so it stays aligned with the latest trends, technologies, and user expectations.',
+          "We continuously refine and update your website so it stays aligned with the latest trends, technologies, and user expectations.",
       },
       {
-        title: 'Fast & Efficient Delivery',
+        title: "Fast & Efficient Delivery",
         description:
-          'Save valuable time and resources with our streamlined process — launching your website quickly without compromising quality.',
+          "Save valuable time and resources with our streamlined process — launching your website quickly without compromising quality.",
       },
       {
-        title: 'Ongoing Support',
+        title: "Ongoing Support",
         description: `We provide reliable guidance and assistance whenever you need it — ensuring you’re never alone on your digital journey.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Team collaboration for growth',
+      src: "https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Team collaboration for growth",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
         Designed to Foster Growth and Success
       </h3>
-      We focus on building websites that evolve with your business, keeping you competitive in a fast-changing digital world.
+      We focus on building websites that evolve with your business, keeping you competitive
+      in a fast-changing digital world.
     </Fragment>
 
     <Fragment slot="bg">
@@ -340,31 +376,31 @@ const metadata = {
       {
         title: 'Step 1: <span class="font-medium">Discovery</span>',
         description:
-          'We start with a strategy call to understand your goals, audience, and vision. This ensures we create a website tailored perfectly to your brand.',
-        icon: 'tabler:search',
+          "We start with a strategy call to understand your goals, audience, and vision. This ensures we create a website tailored perfectly to your brand.",
+        icon: "tabler:search",
       },
       {
         title: 'Step 2: <span class="font-medium">Content & Design</span>',
         description:
-          'Our team designs engaging layouts and adds your content — images, copy, and multimedia — to bring your story to life.',
-        icon: 'tabler:layout',
+          "Our team designs engaging layouts and adds your content — images, copy, and multimedia — to bring your story to life.",
+        icon: "tabler:layout",
       },
       {
         title: 'Step 3: <span class="font-medium">Customization</span>',
         description:
-          'We fine-tune the styles, colors, and functionality to match your unique identity and deliver a smooth, responsive experience.',
-        icon: 'tabler:paint',
+          "We fine-tune the styles, colors, and functionality to match your unique identity and deliver a smooth, responsive experience.",
+        icon: "tabler:paint",
       },
       {
         title: '<span class="font-medium">Step 4: Launch!</span>',
         description:
-          'Once everything looks perfect, we launch your website — fast, secure, and optimized to grow with your business.',
-        icon: 'tabler:check',
+          "Once everything looks perfect, we launch your website — fast, secure, and optimized to grow with your business.",
+        icon: "tabler:check",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Website launch process',
+      src: "https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+      alt: "Website launch process",
     }}
   />
 
@@ -376,58 +412,58 @@ const metadata = {
     tagline="Components"
     items={[
       {
-        title: 'Headers',
+        title: "Headers",
         description:
-          'Clear and structured navigation ensures visitors know exactly where to go from the moment they land on your site.',
-        icon: 'flat-color-icons:template',
+          "Clear and structured navigation ensures visitors know exactly where to go from the moment they land on your site.",
+        icon: "flat-color-icons:template",
       },
       {
-        title: 'Hero Sections',
+        title: "Hero Sections",
         description:
-          'Make a strong first impression with visually stunning hero sections that capture attention and communicate your brand instantly.',
-        icon: 'flat-color-icons:gallery',
+          "Make a strong first impression with visually stunning hero sections that capture attention and communicate your brand instantly.",
+        icon: "flat-color-icons:gallery",
       },
       {
-        title: 'Features',
+        title: "Features",
         description:
-          'Highlight your products, services, and unique value with dedicated feature sections that showcase what sets you apart.',
-        icon: 'flat-color-icons:approval',
+          "Highlight your products, services, and unique value with dedicated feature sections that showcase what sets you apart.",
+        icon: "flat-color-icons:approval",
       },
       {
-        title: 'Content Blocks',
+        title: "Content Blocks",
         description:
-          'Engage your audience with well-structured content sections designed for readability, storytelling, and SEO performance.',
-        icon: 'flat-color-icons:document',
+          "Engage your audience with well-structured content sections designed for readability, storytelling, and SEO performance.",
+        icon: "flat-color-icons:document",
       },
       {
-        title: 'Call-to-Action',
+        title: "Call-to-Action",
         description:
-          'Guide visitors toward the next step with clear and persuasive CTAs, designed to boost conversions and engagement.',
-        icon: 'flat-color-icons:advertising',
+          "Guide visitors toward the next step with clear and persuasive CTAs, designed to boost conversions and engagement.",
+        icon: "flat-color-icons:advertising",
       },
       {
-        title: 'Pricing Tables',
+        title: "Pricing Tables",
         description:
-          'Transparent and attractive pricing layouts help your customers make decisions quickly and confidently.',
-        icon: 'flat-color-icons:currency-exchange',
+          "Transparent and attractive pricing layouts help your customers make decisions quickly and confidently.",
+        icon: "flat-color-icons:currency-exchange",
       },
       {
-        title: 'Testimonials',
+        title: "Testimonials",
         description:
-          'Build trust and credibility with real customer stories, showcasing the positive impact of your work.',
-        icon: 'flat-color-icons:voice-presentation',
+          "Build trust and credibility with real customer stories, showcasing the positive impact of your work.",
+        icon: "flat-color-icons:voice-presentation",
       },
       {
-        title: 'Contact Forms',
+        title: "Contact Forms",
         description:
-          'Make it easy for clients to reach out with user-friendly forms that encourage inquiries and stronger connections.',
-        icon: 'flat-color-icons:business-contact',
+          "Make it easy for clients to reach out with user-friendly forms that encourage inquiries and stronger connections.",
+        icon: "flat-color-icons:business-contact",
       },
       {
-        title: 'Footers',
+        title: "Footers",
         description:
-          'Provide quick access to key links, contact info, and brand details with professional and functional footers.',
-        icon: 'flat-color-icons:database',
+          "Provide quick access to key links, contact info, and brand details with professional and functional footers.",
+        icon: "flat-color-icons:database",
       },
     ]}
   >
@@ -453,37 +489,37 @@ const metadata = {
     title="Frequently Asked Questions"
     subtitle="Answers to the most common questions about our website design and development services."
     tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
+    classes={{ container: "max-w-6xl" }}
     items={[
       {
-        title: 'Why should I choose your company for my website?',
+        title: "Why should I choose your company for my website?",
         description:
-          'We combine modern technology, creative design, and marketing-focused strategies to build websites that not only look great but drive results for your business.',
+          "We combine modern technology, creative design, and marketing-focused strategies to build websites that not only look great but drive results for your business.",
       },
       {
-        title: 'What do I need to get started?',
+        title: "What do I need to get started?",
         description:
-          'Just share your brand details, goals, and any existing content or ideas. We guide you through the rest, making the process smooth and stress-free.',
+          "Just share your brand details, goals, and any existing content or ideas. We guide you through the rest, making the process smooth and stress-free.",
       },
       {
-        title: 'How long does it take to launch a website?',
+        title: "How long does it take to launch a website?",
         description:
-          'Depending on the complexity, most websites are designed, developed, and launched within 4–6 weeks. We ensure quality without unnecessary delays.',
+          "Depending on the complexity, most websites are designed, developed, and launched within 4–6 weeks. We ensure quality without unnecessary delays.",
       },
       {
-        title: 'Can I update my website myself after launch?',
+        title: "Can I update my website myself after launch?",
         description:
-          'Absolutely! We build websites with easy-to-use CMS solutions or provide training, so you can manage content, images, and pages on your own.',
+          "Absolutely! We build websites with easy-to-use CMS solutions or provide training, so you can manage content, images, and pages on your own.",
       },
       {
-        title: 'Do you provide ongoing support?',
+        title: "Do you provide ongoing support?",
         description:
-          'Yes, we offer maintenance and support packages to keep your website secure, up-to-date, and performing optimally.',
+          "Yes, we offer maintenance and support packages to keep your website secure, up-to-date, and performing optimally.",
       },
       {
-        title: 'Will my website be optimized for search engines?',
+        title: "Will my website be optimized for search engines?",
         description:
-          'Every website we build follows SEO best practices, ensuring better visibility, faster load times, and higher chances of ranking well on Google.',
+          "Every website we build follows SEO best practices, ensuring better visibility, faster load times, and higher chances of ranking well on Google.",
       },
     ]}
   />
@@ -492,10 +528,10 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Websites Delivered', amount: '150+' },
-      { title: 'Happy Clients', amount: '120+' },
-      { title: 'Years of Experience', amount: '4+' },
-      { title: 'Industries Served', amount: '20+' },
+      { title: "Websites Delivered", amount: "150+" },
+      { title: "Happy Clients", amount: "120+" },
+      { title: "Years of Experience", amount: "4+" },
+      { title: "Industries Served", amount: "20+" },
     ]}
   />
 
@@ -504,18 +540,19 @@ const metadata = {
   <CallToAction
     actions={[
       {
-        variant: 'primary',
-        text: 'Start Your Project',
-        href: '/contact',
-        icon: 'tabler:rocket',
+        variant: "primary",
+        text: "Start Your Project",
+        href: "/contact",
+        icon: "tabler:rocket",
       },
     ]}
   >
     <Fragment slot="title"> Launch Your Dream Website Today </Fragment>
 
     <Fragment slot="subtitle">
-      Work with our expert team to create a stunning, responsive, and high-performing website tailored to your business
-      goals. Get started now and see your online presence come to life.
+      Work with our expert team to create a stunning, responsive, and
+      high-performing website tailored to your business goals. Get started now
+      and see your online presence come to life.
     </Fragment>
   </CallToAction>
 </Layout>

@@ -12,7 +12,63 @@ export const headerData = {
     },
     {
       text: 'Services',
-      href: getPermalink('/services'),
+      links: [
+        {
+          text: 'Web Development',
+          href: getPermalink('/services/web-development'),
+          links: [
+            {
+              text: 'Frontend',
+              href: getPermalink('/services/web-development/frontend'),
+            },
+            {
+              text: 'Backend',
+              href: getPermalink('/services/web-development/backend'),
+            },
+            {
+              text: 'Full Stack',
+              href: getPermalink('/services/web-development/full-stack'),
+            },
+          ],
+        },
+        {
+          text: 'Mobile App Development',
+          href: getPermalink('/services/mobile-app-development'),
+        },
+        {
+          text: 'SEO & Digital Marketing',
+          href: getPermalink('/services/seo'),
+        },
+      ],
+    },
+    {
+      text: 'Courses',
+      links: [
+        {
+          text: 'Python Programming',
+          href: getPermalink('/courses/python'),
+        },
+        {
+          text: 'Java Development',
+          href: getPermalink('/courses/java'),
+        },
+        {
+          text: 'Web Development',
+          href: getPermalink('/courses/web-development'),
+        },
+        {
+          text: 'Data Science',
+          href: getPermalink('/courses/data-science'),
+        },
+        {
+          text: 'Cloud Computing',
+          href: getPermalink('/courses/cloud-computing'),
+        },
+        {
+          text: 'Cyber Security',
+          href: getPermalink('/courses/cyber-security'),
+        },
+      ],
     },
     {
       text: 'Blog',
@@ -74,9 +130,9 @@ export const footerData = {
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://facebook.com/fishtailcode' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/fishtailcode' },
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/company/fishtailcode' },
-    { ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: 'https://wa.me/9745697694'},
+    { ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: 'https://wa.me/9745697694' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-400" href="/">DTKSN</a> · All rights reserved.
+    Made by <a class="text-blue-600 hover:underline dark:text-gray-400" href="/">Fishtail Code</a> · All rights reserved.
   `,
 };
