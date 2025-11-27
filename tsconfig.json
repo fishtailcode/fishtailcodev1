@@ -6,8 +6,10 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"]
-    }
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "astro"
   },
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist/"]
+  "exclude": ["dist/", "node_modules"]
 }
