@@ -1,0 +1,104 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import HeroText from "~/components/widgets/HeroText.astro";
+import ContactUs from "~/components/widgets/Contact.astro";
+import Features2 from "~/components/widgets/Features2.astro";
+
+const metadata = {
+  title: "Request Syllabus - Fishtail Code",
+  description:
+    "Request the detailed syllabus for our courses. Get comprehensive curriculum details to help you decide on your learning journey.",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Curriculum Details"
+    title="Request Course Syllabus"
+    subtitle="Get the detailed breakdown of what you'll learn. We'll send the complete syllabus directly to your inbox."
+  />
+
+  <ContactUs
+    id="form"
+    title="Get Your Syllabus"
+    subtitle="Fill out the form below to receive the detailed syllabus for your desired course."
+    inputs={[
+      {
+        type: "text",
+        name: "name",
+        label: "Full Name",
+      },
+      {
+        type: "email",
+        name: "email",
+        label: "Email Address",
+      },
+      {
+        type: "tel",
+        name: "phone",
+        label: "Phone Number",
+      },
+      {
+        type: "text",
+        name: "course",
+        label: "Course of Interest",
+        placeholder: "e.g. Python Django",
+      },
+    ]}
+    textarea={{
+      label: "Additional Questions (Optional)",
+      placeholder:
+        "Do you have any specific questions about the course or curriculum?",
+    }}
+    disclaimer={{
+      label:
+        "By submitting this form, you agree to receive the syllabus and occasional updates about our courses.",
+    }}
+    button="Send Syllabus"
+    description="You will receive the syllabus PDF in your email shortly."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Why Request a Syllabus?"
+    subtitle="Understand exactly what you're signing up for"
+    items={[
+      {
+        title: "Detailed Curriculum",
+        description: `See the complete list of topics, modules, and projects you'll work on during the course.`,
+        icon: "tabler:list-details",
+      },
+      {
+        title: "Project Examples",
+        description:
+          "Get an idea of the real-world projects you'll build to add to your portfolio.",
+        icon: "tabler:code",
+      },
+      {
+        title: "Career Outcomes",
+        description:
+          "Learn about the job roles and career paths this course prepares you for.",
+        icon: "tabler:briefcase",
+      },
+    ]}
+  />
+</Layout>
+
+<script>
+  // Pre-fill course name from URL parameter
+  document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const courseParam = urlParams.get("course");
+    if (courseParam) {
+      const courseInput = document.querySelector(
+        'input[name="course"]'
+      ) as HTMLInputElement;
+      if (courseInput) {
+        courseInput.value = courseParam;
+      }
+    }
+  });
+</script>

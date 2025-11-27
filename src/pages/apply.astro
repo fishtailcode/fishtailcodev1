@@ -64,4 +64,18 @@ const metadata = {
     description="We review applications on a rolling basis. If your profile matches our requirements, we will contact you for an interview."
     button="Submit Application"
   />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const positionParam = urlParams.get("position");
+      if (positionParam) {
+        const positionInput = document.querySelector(
+          'input[name="position"]'
+        ) as HTMLInputElement;
+        if (positionInput) {
+          positionInput.value = positionParam;
+        }
+      }
+    });
+  </script>
 </Layout>
