@@ -121,14 +121,14 @@ export const services: Service[] = [
         step: '04',
         title: 'Testing',
         description: 'Ensuring cross-browser compatibility.',
-        icon: 'tabler:browser-check',
+        icon: 'tabler:browser',
       },
     ],
     features: [
       { title: 'Interactive UI', description: 'Dynamic and responsive interfaces.', icon: 'tabler:click' },
       { title: 'Accessibility', description: 'WCAG compliant designs.', icon: 'tabler:accessible' },
       { title: 'Performance', description: 'Optimized asset loading.', icon: 'tabler:gauge' },
-      { title: 'Modern Frameworks', description: 'Using the latest tech stack.', icon: 'tabler:stack-2' },
+      { title: 'Modern Frameworks', description: 'Using the latest tech stack.', icon: 'tabler:stack' },
     ],
     technologies: [
       'tabler:brand-react',
@@ -170,7 +170,7 @@ export const services: Service[] = [
         icon: 'tabler:chart-arrows-vertical',
       },
       { title: 'Secure APIs', description: 'Protected endpoints and data.', icon: 'tabler:shield-lock' },
-      { title: 'Data Integrity', description: 'Reliable data storage and retrieval.', icon: 'tabler:database-check' },
+      { title: 'Data Integrity', description: 'Reliable data storage and retrieval.', icon: 'tabler:database' },
       {
         title: 'Cloud Integration',
         description: 'Seamless deployment to cloud platforms.',
@@ -205,7 +205,7 @@ export const services: Service[] = [
         step: '02',
         title: 'System Design',
         description: 'Designing full stack architecture.',
-        icon: 'tabler:device-desktop-analytics',
+        icon: 'tabler:device-desktop',
       },
       { step: '03', title: 'Agile Development', description: 'Iterative development process.', icon: 'tabler:refresh' },
       { step: '04', title: 'Deployment', description: 'Full system launch.', icon: 'tabler:rocket' },
@@ -213,7 +213,7 @@ export const services: Service[] = [
     features: [
       { title: 'Unified Solution', description: 'Seamless frontend and backend integration.', icon: 'tabler:puzzle' },
       { title: 'Cost Effective', description: 'One team for all development needs.', icon: 'tabler:coin' },
-      { title: 'Faster Delivery', description: 'Streamlined development process.', icon: 'tabler:clock-fast' },
+      { title: 'Faster Delivery', description: 'Streamlined development process.', icon: 'tabler:clock' },
       { title: 'Consistent Quality', description: 'Uniform coding standards.', icon: 'tabler:check' },
     ],
     technologies: [
